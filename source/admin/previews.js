@@ -67,7 +67,7 @@ const HomePreview = ({ entry, widgetFor }) => {
 const NavigationPreview = ({ entry }) => {
   const data = entry.get('data').toJS()
   return (
-    <header className="header-primary">
+    <header className="header-primary" style={{ marginTop: '140px' }}>
       <div className="logo">
         <a href="/">
           <img src="/images/logo.svg" alt="Kaldi"/>
@@ -76,7 +76,7 @@ const NavigationPreview = ({ entry }) => {
       <a className="nav-button">
         <img src="/images/nav-open.svg" className="open"/>
       </a>
-      <nav className="navigation" style={{ paddingRight: '40px' }}>
+      <nav className="navigation">
         <ul>
           {!data.nav_items ? null : data.nav_items.map((item, idx) => (
             <li key={idx}>
